@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+// ファイル名を拡張子無しで書いてください。
+const markdowns: string[] = [];
+---
+
+<Layout title="jsys24-hackathon">
+  <h1>jsys24-hackathon</h1>
+  <ul>
+    {
+      markdowns.map((markdown) => (
+        <li>
+          <a href={"./" + markdown + "/"}>{markdown}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
+
+<style>
+  h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  ul {
+    width: 200px;
+    margin: auto;
+  }
+  li {
+    list-style: none;
+  }
+</style>
