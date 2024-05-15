@@ -14,7 +14,9 @@ const members: string[] = ["member1", "member2", "member3", "member4", "member5"
     {
       members.map((member) => (
         <li>
-          <a href={"./" + member + "/"}>{member}</a>
+          <a href={"./" + member + "/"}>
+            <div class="item-box">{member}</div>
+          </a>
         </li>
       ))
     }
@@ -38,6 +40,22 @@ const members: string[] = ["member1", "member2", "member3", "member4", "member5"
     margin: auto;
   }
   li {
+    margin-top: 20px;
+    margin-bottom: 20px;
     list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .item-box {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    text-align: center;
+    color: black;
+    box-shadow: 0px 5px 15px 0px rgba(81, 81, 81, 0.35);
+  }
+  .item-box:hover {
+    box-shadow: 0px 5px 15px 0px rgba(151, 151, 151, 0.35);
   }
 </style>
